@@ -7,11 +7,12 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "bin/bundle"
 
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 200
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"
@@ -30,6 +31,7 @@ Metrics/BlockLength:
 
 Style/Documentation:
   Enabled: false
+
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/EachForSimpleLoop:
