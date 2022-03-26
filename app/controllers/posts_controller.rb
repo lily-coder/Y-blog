@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # rubocop:disable Style/Documentation
 class PostsController < ApplicationController
   def index; end
