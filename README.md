@@ -1,24 +1,42 @@
-# README
+# Y-blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With
+- Ruby on Rails
+- Ruby
+- Rubocop
 
-Things you may want to cover:
+## Getting Started
+You must have the following installed:
+- Ruby V 3.0.3
+- Ruby on Rails V 
+- PostgreSQL
 
-* Ruby version
+### Setup
+ - git clone https://github.com/lily-coder/Y-blog.git
+ - cd y-blog
+### Prerequisites
+Run:
+    ```bundle install``` To install independencies
+    ```rails db:create``` To create the database
+    ```rails db:migrate``` For database setup
+    ```rails s``` To run it on the server
 
-* System dependencies
+Open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
-* Configuration
+### Tests
+Run: 
+    ```npm i```
+    ```rails generate rspec:install```
+    ```rspec spec```
+## Authors
 
-* Database creation
+👤 **Lilian Moraa**
 
-* Database initialization
+- GitHub: [@lily-coder](https://github.com/lily-coder/)
+- LinkedIn: [Lilian Moraa](https://www.linkedin.com/in/lilian-moraa-99950b1b8/)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/lily-coder/Y-blog/issues).
+## Show your support
+Give a ⭐️ if you like this project!
