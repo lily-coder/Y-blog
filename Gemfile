@@ -5,7 +5,6 @@ ruby '3.0.2'
 
 gem 'rails-controller-testing'
 gem 'rspec-rails'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
