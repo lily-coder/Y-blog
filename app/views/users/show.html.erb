@@ -9,7 +9,7 @@
       <li class="border border-3 border-dark container p-2 my-5 bio" >
         <div>
           <div>
-            <%= link_to user_post_path(@user.id, p.id), id: "user_post#{p.id}" do %>
+            <%= link_to user_post_path(@user, p), id: "user_post#{p.id}" do %>
               <h4 class="py-4"><%= p.title %></h4>
             <% end %>
             <p><%= p.text %> </p>
@@ -22,6 +22,6 @@
   <% end %>
   </ul>
   <div class="d-flex justify-content-center">
-    <%= link_to "See all posts", user_posts_path(@user.id), class: "btn btn-dark d-flex justify-content-center align-self-center mb-5 button display" %>
+    <%= link_to "See all posts", user_posts_path(@user), class: "btn btn-dark d-flex justify-content-center align-self-center mb-5 button display" %>
   <div>
 </div>
