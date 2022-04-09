@@ -1,8 +1,14 @@
-# frozen_string_literal: true
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+sheena = User.create(name: 'Sheena', photo: '/sheena.jpg', bio: 'Teacher from Mexico.')
+lilian = User.create(name: 'Lilly', photo: '/user.png', bio: 'Teacher from Poland.')
+sheena_first_post = Post.create(author: sheena, title: 'Hello', text: 'This is my first post')
+sheena_second_post = Post.create(author: sheena, title: 'Hello', text: 'This is my second post')
+lilian_first_post = Post.create(author: lilian, title: 'Hello', text: 'This is my first post')
+lilian_second_post = Post.create(author: lilian, title: 'Hello', text: 'This is my second post')
+Comment.create(post: sheena_first_post, author: lilian, text: 'Hi Sheena!' )
+Comment.create(post: sheena_first_post, author: lilian, text: 'How are you!' )
+Comment.create(post: sheena_second_post, author: lilian, text: 'Hi Sheena!' )
+Comment.create(post: sheena_second_post, author: lilian, text: 'How are you!' )
+Comment.create(post: lilian_first_post, author: sheena, text: 'Hi lilian!' )
+Comment.create(post: lilian_first_post, author: sheena, text: 'How are you!' )
+Comment.create(post: lilian_second_post, author: sheena, text: 'Hi lilian!' )
+Comment.create(post: lilian_second_post, author: sheena, text: 'How are you!' )
