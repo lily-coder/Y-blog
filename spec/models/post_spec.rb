@@ -4,7 +4,8 @@ RSpec.describe Post, type: :model do
   describe 'validations' do
     user = User.create(name: 'Lilian', bio: 'Engineer from Nakuru, Kenya.', posts_counter: 0)
     subject do
-      Post.new(title: 'My first post', text: 'Engineer from Nakuru, Kenya.', author: user, comments_counter: 1, likes_counter: 2)
+      Post.new(title: 'My first post', text: 'Engineer from Nakuru, Kenya.', author: user, comments_counter: 1,
+               likes_counter: 2)
     end
 
     before { subject.save }
