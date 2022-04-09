@@ -12,18 +12,6 @@ a {
   align-self: flex-end;
 }
 
-.msg {
-  width: 70%;
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
-}
-
-input::placeholder,
-textarea::placeholder {
-  font-style: italic;
-}
-
 ul {
   list-style: none;
   padding: 0;
