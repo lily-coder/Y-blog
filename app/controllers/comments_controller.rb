@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
   def create
+
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id
     @comment.post_id = params[:post_id]
@@ -16,6 +17,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
     params.permit(:text)
   end
