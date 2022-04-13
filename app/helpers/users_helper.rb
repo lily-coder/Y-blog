@@ -1,5 +1,5 @@
 module UsersHelper
   def user_img(user)
-    user.photo.present? ? user.photo : '/user.png'
+    user.avatar.present? ? user.avatar : '/user.png'
   end
 end
