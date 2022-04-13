@@ -1,3 +1,4 @@
+
 # sheena = User.create(name: 'Sheena', avatar: '/sheena.jpg', bio: 'Teacher from Mexico.')
 # lilian = User.create(name: 'Lilly', avatar: '/user.png', bio: 'Teacher from Poland.')
 # sheena_first_post = Post.create(author: sheena, title: 'Hello', text: 'This is my first post')
