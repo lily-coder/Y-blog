@@ -35,12 +35,13 @@ RSpec.feature 'Logins', type: :feature do
       fill_in 'Password', with: 'mypassword'
     end
     click_button 'Log in'
-    expect(page).to have_content "Email"
-    expect(page).to have_content "Email"
+    expect(page).to have_content 'Email'
+    expect(page).to have_content 'Email'
   end
 
   scenario "When click on user Should redirected to that user's show page" do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, id: 1)
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         id: 1)
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, id: 2)
 
     Post.create(title: 'Email', text: 'Emails and passwords are secrets', author_id: @user2.id)

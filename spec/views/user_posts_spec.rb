@@ -4,7 +4,7 @@ RSpec.feature 'User Index', type: :feature do
   background { visit new_user_session_path }
   scenario "I can see the user's profile picture." do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -21,7 +21,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario "I can see the user's username." do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -39,7 +39,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario 'I can see the number of posts the user has written' do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -57,7 +57,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario " can see a post's title." do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -75,7 +75,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario " can see some of the post's body." do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -93,7 +93,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario 'can see the first comments on a post.' do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -112,7 +112,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario 'I can see how many comments a post has.' do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -134,7 +134,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario ' can see how many likes a post has.' do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -152,7 +152,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario 'I can see a section for pagination if there are more posts than fit on the view.' do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 
@@ -176,7 +176,7 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario "When I click on a post, it redirects me to that post's show page." do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya")
+                         bio: 'Software Engineer from Nakuru, Kenya')
     @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
                          bio: 'Software engineer')
 

@@ -43,8 +43,10 @@ RSpec.feature 'Logins', type: :feature do
   end
 
   scenario "can see the user's bio." do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "I'm a good person")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Software engineer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: "I'm a good person")
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software engineer')
 
     Post.create(title: 'Software Development', text: 'I love software develoepers', author_id: @user2.id)
     within 'form' do
@@ -57,8 +59,10 @@ RSpec.feature 'Logins', type: :feature do
   end
 
   scenario "can see the user's first 3 posts." do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "I'm a good person")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Software engineer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: "I'm a good person")
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software engineer')
 
     Post.create(title: 'hello there', text: 'Software developers are great', author_id: @user2.id)
     Post.create(title: 'hello there', text: 'I know you', author_id: @user2.id)
@@ -74,8 +78,10 @@ RSpec.feature 'Logins', type: :feature do
   end
 
   scenario "can see a button that lets me view all of a user's posts." do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "I'm a good person")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Software engineer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: "I'm a good person")
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software engineer')
 
     Post.create(title: 'Software Engineering', text: 'Software developers are great', author_id: @user2.id)
     within 'form' do
@@ -88,8 +94,10 @@ RSpec.feature 'Logins', type: :feature do
   end
 
   scenario "can see a button that lets me view all of a user's posts." do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "I'm a good person")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Software engineer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: "I'm a good person")
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software engineer')
 
     @post = Post.create(title: 'Software Engineering', text: 'Software developers are great', author_id: @user2.id)
     within 'form' do
@@ -103,8 +111,10 @@ RSpec.feature 'Logins', type: :feature do
   end
 
   scenario "can see a button that lets me view all of a user's posts." do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "I'm a good person")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Software engineer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: "I'm a good person")
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software engineer')
     @post = Post.create(title: 'Software Engineering', text: 'Software developers are great', author_id: @user2.id)
     within 'form' do
       fill_in 'Email', with: @user1.email

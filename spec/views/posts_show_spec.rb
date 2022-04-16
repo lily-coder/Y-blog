@@ -5,8 +5,9 @@ RSpec.feature 'User Index', type: :feature do
 
   scenario "I can see the post's title." do
     @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
-                         bio: "Software Engineer from Nakuru, Kenya.")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer from Nakuru, Kenya.')
+                         bio: 'Software Engineer from Nakuru, Kenya.')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer from Nakuru, Kenya.')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
 
@@ -23,8 +24,10 @@ RSpec.feature 'User Index', type: :feature do
   end
 
   scenario 'I can see who wrote the post.' do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "Software")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
 
@@ -41,8 +44,10 @@ RSpec.feature 'User Index', type: :feature do
   end
 
   scenario 'I can see how many comments it has.' do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "Software")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
     @coment = Comment.create(text: ' comment one', author_id: @user2.id,
@@ -57,12 +62,14 @@ RSpec.feature 'User Index', type: :feature do
     find("a[href='#{user_path(@user2.id)}']").click
     find("a[href='#{user_posts_path(@user2.id)}']").click
     find("a[href='#{user_post_path(@user2.id, @post.id)}']").click
-    expect(page).to have_content "Comments"
+    expect(page).to have_content 'Comments'
   end
 
   scenario 'I can see how many likes it has.' do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "Software")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
     Like.create(author_id: @user2.id, post_id: @post.id)
@@ -80,8 +87,10 @@ RSpec.feature 'User Index', type: :feature do
   end
 
   scenario 'I can see the post body.' do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "Software")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
     Like.create(author_id: @user2.id, post_id: @post.id)
@@ -99,8 +108,10 @@ RSpec.feature 'User Index', type: :feature do
   end
 
   scenario 'I can see the username of each commentor.' do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "Software")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
     @coment1 = Comment.create(text: ' comment one', author_id: @user2.id,
@@ -123,8 +134,10 @@ RSpec.feature 'User Index', type: :feature do
   end
 
   scenario 'I can see the comment each commentor left.' do
-    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: "Software")
-    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now, bio: 'Farmer')
+    @user1 = User.create(name: 'Lilian', email: 'lilyondie@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Software')
+    @user2 = User.create(name: 'Adrian', email: 'adri@gmail.com', password: 'mypassword', confirmed_at: Time.now,
+                         bio: 'Farmer')
 
     @post = Post.create(title: 'Hello guys', text: 'Here is another post', author_id: @user2.id)
     @coment1 = Comment.create(text: ' comment one', author_id: @user2.id,
