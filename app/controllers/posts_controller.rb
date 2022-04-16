@@ -21,7 +21,7 @@ class PostsController < ApplicationController
       format.html do
         if new_post.save
           redirect_to user_post_path(new_post.author_id, new_post.id),
-          notice: 'Post created successfully'
+                      notice: 'Post created successfully'
         else
           render :new, alert: 'Post not created. Please try again!'
         end
