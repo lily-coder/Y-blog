@@ -21,7 +21,7 @@
               <span>Likes: <%= p.comments.size %></span>
             </div>
           </div>
-          <% if can? :destroy, post %>
+          <% if can? :destroy, @post %>
             <%= button_to "Delete Post", user_post_path(@user.id, post.id), :method => :delete %>
           <%end%>
           <div>
